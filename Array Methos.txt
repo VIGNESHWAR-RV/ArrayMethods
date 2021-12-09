@@ -1,0 +1,168 @@
+
+ //Recap session tasks
+ 
+ const scores = [
+  {
+    marks: 32,
+    name: "Yvette Merritt"
+  },
+  {
+    marks: 57,
+    name: "Lillian Ellis"
+  },
+  {
+    marks: 22,
+    name: "Mccall Carter"
+  },
+  {
+    marks: 21,
+    name: "Pate Collier"
+  },
+  {
+    marks: 91,
+    name: "Debra Beard"
+  },
+  {
+    marks: 75,
+    name: "Nettie Hancock"
+  },
+  {
+    marks: 20,
+    name: "Hatfield Hodge"
+  }
+];
+
+// Task 1
+// Print the name list - As an array
+// Expected Output
+// ["Yvette Merritt", "Lillian Ellis", "Mccall Carter", "Pate Collier" ,
+//  "Debra Beard", "Nettie Hancock",  "Hatfield Hodge"]
+
+   //ANSWER
+// console.log(scores.map(x=>x.name));
+
+// Task 2
+// >=40 pass.. find those student that passed (Use array method)
+// Expected Output
+// [{
+//     marks: 57,
+//     name: "Lillian Ellis"
+//   },
+//     {
+//     marks: 91,
+//     name: "Debra Beard"
+//   },
+//   {
+//     marks: 75,
+//     name: "Nettie Hancock"
+//   }]
+
+    //ANSWER
+//console.log(scores.filter(x=>x.marks>=40));
+
+// Task 3
+//  Find all the names who failed the exams (Array methods)
+// Expected Output
+//   ["Yvette Merritt",
+//   "Mccall Carter",
+//   "Pate Collier",
+//   "Hatfield Hodge"
+// ];
+
+    //ANSWER
+//console.log(scores.filter(x=>x.marks<40).map(x=>x.name));
+
+// Task 4
+// Find the Average marks
+   
+   //ANSWER
+//console.log(Math.round(scores.reduce((total,each)=>total+each.marks,0)/scores.length));
+
+// Task 5
+// Find the topper's name
+// Expected Output
+// "Debra Beard"
+
+   //ANSWER
+   
+//console.log(scores.filter(x=>x.marks===(scores.reduce((max,each)=>(max<each.marks)?max=each.marks:max=max,0))).map(x=>x.name));
+
+/Task-6
+
+// i)  INTERSECTION
+
+// let a = [1,2,3,4,5,6];
+
+// let b = [5,6,7,8,9];
+
+// let intersection =(arr1,aar2)=>{
+//   let common = [];
+//   for(let i of a){
+//         let count = 0;
+//       for(let j of b){
+//           (i===j)?count++:count=count;
+//       }
+//       if(count>0){
+//           common.push(i);
+//       }
+//   }
+//   console.log(common);
+// };
+// intersection(a,b);
+
+// ii) UNIQUE ELEMENTS
+
+// let a = [1,2,3,4,5,6,5,4,2,1];
+
+// let unique = (arr1)=>{
+//     let unique = [];
+//     for(let i of arr1){
+//         let count=0;
+//         for (let j of arr1){
+//           if(i===j) count++;
+//         }
+//         if(count===1){
+//             unique.push(i);
+//         }
+//     }
+//     console.log(unique);
+// };
+// unique(a);
+
+// iii)  WITHOUT 
+
+// let a = [1,2,3,4,5,6,5,3,2,1];
+
+// let without = (arr1,...values)=>{
+//     let without = [];
+//     for(let i of arr1){
+//         if(!values.includes(i)){
+//             without.push(i);
+//         }
+//     }
+//     console.log(without);
+// };
+
+// without(a,1,2,3,5);
+
+// iv) GROUPBY
+
+// let a = [6.1,6.2,6.3,6.4,6.5,6.6,6.7,6.7,6.7,6.8,6.8,6.9];
+
+// let group = (arr1,num1,num2)=>{
+//   let group1=[];
+//   let group2=[];
+//   for(let i=0;i<arr1.length;i=i){
+//       let j = Math.round(arr1[i]);
+//       if(j===num1){
+//           let k = arr1.shift();
+//           group1.push(k);
+//       }else if(j===num2){
+//           let k = arr1.shift();
+//           group2.push(k)
+//       }
+//   }
+//   console.log(group1,group2,arr1);
+// };
+
+// group(a,6,7);
