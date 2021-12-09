@@ -97,9 +97,9 @@
 
 // let intersection =(arr1,aar2)=>{
 //   let common = [];
-//   for(let i of a){
+//   for(let i of arr1){
 //         let count = 0;
-//       for(let j of b){
+//       for(let j of arr2){
 //           (i===j)?count++:count=count;
 //       }
 //       if(count>0){
